@@ -15,3 +15,8 @@ Vec3dD randomPointInUnitSphere() {
   while (p.normSquared() >= 1.0);
   return p;
 }
+
+Vec3dD reflect(const Vec3dD& v, const Vec3dD& n) {
+  // assert(n.norm() == 1);
+  return v - 2 * v.dot(n) * n;
+}
